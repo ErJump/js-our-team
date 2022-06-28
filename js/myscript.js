@@ -1,4 +1,4 @@
-let teamList = [
+const teamList = [
     {
         name : 'Wayne Barnett',
         role : 'Founder & CEO',
