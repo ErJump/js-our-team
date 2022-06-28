@@ -6,7 +6,7 @@ const teamList = [
     },
     {
         name : 'Angela Caroll',
-        role : 'Founder & CEO',
+        role : 'Chief Editor',
         img : 'angela-caroll-chief-editor.jpg',
     },
     {
