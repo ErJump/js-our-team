@@ -29,6 +29,11 @@ const teamList = [
         role : 'Graphic Designer',
         img : 'barbara-ramos-graphic-designer.jpg',
     },
+    {
+        name : 'Nyan Cat',
+        role : 'Mascotte',
+        img : 'poptart1redrainbowfix_1.0.gif',
+    }
 ];
 
 const container = document.getElementById('cardContainer');
@@ -37,7 +42,7 @@ for (let i = 0; i < teamList.length; i++){
     const currentMember = teamList[i];
     const newDiv = document.createElement('div');
     //const newImg = document.createElement('img');
-    newImg.setAttribute('src', `img/${currentMember.img}`);
+    //newImg.setAttribute('src', `img/${currentMember.img}`);
     newDiv.classList.add('col-4', 'py-3');
     newDiv.innerHTML = `<div class="card" style="width: 18rem;">
         <img src="img/${currentMember.img}" class="card-img-top" alt="...">
