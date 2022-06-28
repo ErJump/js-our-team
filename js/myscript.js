@@ -31,7 +31,13 @@ let teamList = [
     },
 ];
 
+const container = document.getElementById('cardContainer');
+
 for (let i = 0; i < teamList.length; i++){
     const currentMember = teamList[i];
+    const newDiv = document.createElement('div');
+    newDiv.classList.add('col-12');
+    newDiv.innerHTML = `${currentMember.name} ${currentMember.role} ${currentMember.img}`;
     console.log(`${currentMember.name} ${currentMember.role} ${currentMember.img}`);
+    container.append(newDiv);
 }
