@@ -40,18 +40,27 @@ const container = document.getElementById('cardContainer');
 
 for (let i = 0; i < teamList.length; i++){
     const currentMember = teamList[i];
-    const newDiv = document.createElement('div');
+    const newDiv = createDiv();
     //const newImg = document.createElement('img');
     //newImg.setAttribute('src', `img/${currentMember.img}`);
-    newDiv.classList.add('col-4', 'py-3');
-    newDiv.innerHTML = `<div class="card" style="width: 18rem;">
-        <img src="img/${currentMember.img}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">${currentMember.name}</h5>
-        <p class="card-text">${currentMember.role}</p>
-        </div>
-    </div>`;
+    modifyHTML(newDiv, currentMember); 
     console.log(`${currentMember.name} ${currentMember.role} ${currentMember.img}`);
     //newDiv.append(newImg);
     container.append(newDiv);
+}
+
+function createDiv (){
+    const div = document.createElement('div');
+    div.classList.add('col-4', 'py-3');
+    return div;
+}
+
+function modifyHTML (div , member){
+    div.innerHTML = `<div class="card" style="width: 18rem;">
+        <img src="img/${member.img}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">${member.name}</h5>
+        <p class="card-text">${member.role}</p>
+        </div>
+    </div>`;
 }
