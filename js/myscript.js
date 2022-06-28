@@ -36,11 +36,17 @@ const container = document.getElementById('cardContainer');
 for (let i = 0; i < teamList.length; i++){
     const currentMember = teamList[i];
     const newDiv = document.createElement('div');
-    const newImg = document.createElement('img');
+    //const newImg = document.createElement('img');
     newImg.setAttribute('src', `img/${currentMember.img}`);
-    newDiv.classList.add('col-12', 'py-3');
-    newDiv.innerHTML = `${currentMember.name} ${currentMember.role}`;
+    newDiv.classList.add('col-4', 'py-3');
+    newDiv.innerHTML = `<div class="card" style="width: 18rem;">
+        <img src="img/${currentMember.img}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">${currentMember.name}</h5>
+        <p class="card-text">${currentMember.role}</p>
+        </div>
+    </div>`;
     console.log(`${currentMember.name} ${currentMember.role} ${currentMember.img}`);
-    newDiv.append(newImg);
+    //newDiv.append(newImg);
     container.append(newDiv);
 }
